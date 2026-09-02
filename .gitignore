@@ -1,0 +1,6 @@
+# Python Cache & temporäre Dateien
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
