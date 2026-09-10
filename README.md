@@ -6,7 +6,7 @@ Dieses Repository enthält den Quellcode sowie die Skripte zur Generierung der n
 
 ## Übersicht
 
-Das Hauptziel dieser Arbeit ist die theoretische Untersuchung und praktische Evaluierung eines **semiglatten Newton-Verfahrens** für das quadratisch regularisierte und penalisierte Hitchcock-Problem (endliches Transportproblem). Zur Einordnung der Performanz, Laufzeit und Genauigkeit wird das Verfahren empirisch mit zwei etablierten Algorithmen verglichen:
+Das Hauptziel dieser Arbeit ist die theoretische Untersuchung und praktische Evaluierung eines **semiglatten Newton-Verfahrens** für das quadratisch regularisierte und penalisierte Hitchcock-Problem (endliches Transportproblem). Zur Einordnung der Leistung, Laufzeit und Genauigkeit wird das Verfahren empirisch mit zwei etablierten Algorithmen verglichen:
 - **Sinkhorn-Algorithmus** (entropische Regularisierung)
 - **Simplex-Algorithmus** (exaktes Verfahren via *Python Optimal Transport*, POT)
 
