@@ -1,4 +1,4 @@
-# Erster Test, um die Plausibilität des semiglatten Newtonverfahrens zu überprüfen.
+# Erster Test, um die Plausibilitaet des semiglatten Newtonverfahrens zu ueberpruefen.
 # Vergleicht die Ergebnisse des semiglatten Newtonverfahrens mit den Ergebnissen des Simplexverfahrens für verschiedene Dimensionen und Parameterwerte.
 # ---------- Imports - Pakete, Algorithmen und Hilfsfunktionen ---------- 
 
@@ -21,11 +21,11 @@ import numpy as np
 # Darstellung der Plots
 from Algorithmen_Funktionen.plotStilEinstellung import plt, COLORS, COLORS_LIGHT
 
-# Plausibilitätstest
+# Plausibilitaetstest
 def plausibilitaetsTest(dimWerte = [(10, 10)], paramWerte = [(1, 1)], dateiname = "Plausibilitaetstest", tol=1e-10, maxit=10000, alpha0 = None, beta0 =None):
-    """Fuehrt den Plausibilitätstest für das semiglatte Newtonverfahren durch und speichert die Ergebnisse in einer CSV-Datei."""
+    """Fuehrt den Plausibilitaetstest für das semiglatte Newtonverfahren durch und speichert die Ergebnisse in einer CSV-Datei."""
 
-    # Evtl. alte CSV-Datei löschen
+    # Evtl. alte CSV-Datei loeschen
     dateipfad = CSV_ORDNER / f"{dateiname}.csv"
     if dateipfad.is_file():
         dateipfad.unlink()
@@ -56,7 +56,7 @@ def plausibilitaetsTest(dimWerte = [(10, 10)], paramWerte = [(1, 1)], dateiname 
     latexPlausibilitaetstest(dateiname)
 
 def sicherungPlausibilitaetsTest(dateiname, ergebnisNewton, ergebnisSimplex):
-    """Speichert die Ergebnisse des Plausibilitätstests in einer CSV-Datei."""
+    """Speichert die Ergebnisse des Plausibilitaetstests in einer CSV-Datei."""
 
     dateipfad = CSV_ORDNER / f"{dateiname}.csv"
     dateiExistiert = dateipfad.is_file()
@@ -85,7 +85,7 @@ def sicherungPlausibilitaetsTest(dateiname, ergebnisNewton, ergebnisSimplex):
         ])
 
 def latexPlausibilitaetstest(dateiname):
-    """Erstellt eine LaTeX-Tabelle für den Plausibilitätstest und speichert sie als .tex-Datei."""
+    """Erstellt eine LaTeX-Tabelle für den Plausibilitaetstest und speichert sie als .tex-Datei."""
 
     # ---- CSV-Datei ----
     df_latex = pd.read_csv(CSV_ORDNER / f"{dateiname}.csv", sep=',', header=0)
