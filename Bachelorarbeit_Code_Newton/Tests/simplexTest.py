@@ -25,7 +25,7 @@ from Algorithmen_Funktionen.plotStilEinstellung import plt, COLORS, COLORS_LIGHT
 def simplexTest(dimensionen, dateiname="Simplextest", numSeeds=10):
     """Fuehrt den Simplex-Test für verschiedene Dimensionen durch und speichert die Ergebnisse in einer CSV-Datei."""
 
-    # Evtl. alte CSV-Datei löschen
+    # Evtl. alte CSV-Datei loeschen
     dateipfad = CSV_ORDNER / f"{dateiname}.csv"
     if dateipfad.is_file():
         dateipfad.unlink()
@@ -80,7 +80,7 @@ def diagrammSimplexTest(dateiname):
     # ---- CSV-Datei einlesen ----
     df = pd.read_csv(CSV_ORDNER / f"{dateiname}.csv", sep=",", header=0)
 
-    # Nur gültige Zeilenberücksichtigen
+    # Nur gueltige Zeilenberuecksichtigen
     df_gueltig = df[df["istGueltig"] == True]
 
     # Gruppierung nach n und m
@@ -89,7 +89,7 @@ def diagrammSimplexTest(dateiname):
     for (n, m), group in df.groupby(["n", "m"]):
         gueltige_gruppe = df_gueltig[(df_gueltig["n"] == n) & (df_gueltig["m"] == m)]
         
-        # Anteil der gültigen Durchläufe
+        # Anteil der gueltigen Durchlaeufe
         anteil_gueltig = len(gueltige_gruppe) / len(group) if len(group) > 0 else 0.0
 
         if len(gueltige_gruppe) > 0:
@@ -97,7 +97,7 @@ def diagrammSimplexTest(dateiname):
             marg_val = stats.trim_mean(gueltige_gruppe["Marginalfehler"], 0.1)
             kost_val = stats.trim_mean(gueltige_gruppe["Kosten"], 0.1)
         else:
-            # Falls keine gültigen Daten vorhanden sind
+            # Falls keine gueltigen Daten vorhanden sind
             zeit_val = np.nan
             marg_val = np.nan
             kost_val = np.nan
