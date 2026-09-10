@@ -127,7 +127,7 @@ def diagrammKonvergenzTestEinzel(dateiname):
         ax_res = axes[0]
         ax_schritt = axes[1]
 
-        # Einzelne Läufe plotten
+        # Einzelne Laeufe plotten
         for idx, row in einzellaeufe.iterrows():
             eps, gamma, seed = row["eps"], row["gamma"], row["Seed"]
             
