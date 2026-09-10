@@ -26,7 +26,7 @@ from Algorithmen_Funktionen.plotStilEinstellung import plt, COLORS, COLORS_LIGHT
 def parameterTest(n, m,  epsWerte, gammaWerte, dateiname="Parametertest",numSeeds=10, tol=1e-10, maxit=10000, reduktionsfaktor=0.5, min_schritt=1e-12,alpha0 = None, beta0 =None):
     """Fuehrt den Parametertest für das semiglatte Newtonverfahren durch und speichert die Ergebnisse in einer CSV-Datei."""
 
-    # Evtl. alte CSV-Datei löschen
+    # Evtl. alte CSV-Datei loeschen
     dateipfad = CSV_ORDNER / f"{dateiname}.csv"
     if dateipfad.is_file():
         dateipfad.unlink()
